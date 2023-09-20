@@ -10,7 +10,6 @@ app.use(cors());
 mongoose.connect("mongodb://localhost:27017/keeperDB", {
     useNewUrlParser: true, 
     useUnifiedTopology: true,
-    useCreateIndex: true
 });
 
 const db = mongoose.connection;
@@ -51,12 +50,10 @@ app.post("/delete", function(req,res){
         if(err){
             console.log(err);
         } else{
-            console.log("Note Deleted Successfully");
+            console.log
             // console.log(req.body);
         }
     });
 });
 
-app.listen(4000, function() {
-    console.log("Node Server started on port 4000");
 });
